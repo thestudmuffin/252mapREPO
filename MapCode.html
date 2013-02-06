@@ -1,0 +1,46 @@
+<!--This is the document we will use to write the map code.-->
+
+<!DOCTYPE html>
+
+<html>
+
+<!--these style notes determine the map size-->
+
+<style type="text/css">
+	html { height: 25% }
+	body { height: 25%; margin: 0; padding: 0; }
+	#map_canvas {height: 50%}
+</style>
+
+<!--this portion of the code starts the script for the map-->
+
+<head>
+
+	<script type="text/javascript"
+	   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiypqnX6AGJUfeCrfvRK12EmD1YOiPOw4&sensor=false">
+	</script>
+
+
+<!--this script tells the map where to be centered-->
+
+<style type="text/javascript">
+ function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+      }
+</script>
+
+<body onload="initialize()">		
+
+<!--This div tells the website where to put the map-->
+
+<div id="map_canvas" style="width: 100%; height: 100%"></div>
+</head>
+
+</html>
+
